@@ -2,13 +2,13 @@ const Movie = require('../models/movie');
 
 Movie.create([
   {
-    title: 'Wonder Women',
+    title: 'Wonder Woman',
     yearReleased: 2017,
-    star: 'Gal gadot'
+    star: 'Gal Gadot'
   },
   {
     title: 'Star Wars',
     yearReleased: 1977,
-    star: 'Carrie fisher'
+    star: 'Carrie Fisher'
   }
 ]);
