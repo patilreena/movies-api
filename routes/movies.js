@@ -4,6 +4,14 @@ const Person = require('../models/person');
 
 const router = express.Router();
 
+const authorize = (req, res, next) => {
+  if (req.user) {
+    next();
+  } else {
+    res.status(403).end();
+  }
+};
+
 router.get('/', (req, res) => {
   Movie.find()
     .populate('director')
