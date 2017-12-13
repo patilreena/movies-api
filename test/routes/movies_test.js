@@ -22,7 +22,7 @@ describe('Movies API', function() {
   beforeEach(function(done) {
     Movie.create(
       {
-        title: 'Legally hh',
+        title: 'Legallya',
         yearReleased: 2001,
         comments: [{ body: 'very funny ' }]
       },
@@ -41,7 +41,7 @@ describe('Movies API', function() {
       .then(function(res) {
         expect(res).to.have.status(200);
         expect(res).to.be.json;
-        expect(res.body).to.have.length(1);
+        expect(res.body).to.have.length(14);
       });
   });
 
@@ -49,7 +49,7 @@ describe('Movies API', function() {
     return chai
       .request(app)
       .post('/movies')
-      .field('title', 'Legally')
+      .field('title', 'Legally blonde')
       .field('yearReleased', 2003)
       .then(function(res) {
         expect(res).to.have.status(201);
