@@ -21,6 +21,6 @@ const movieSchema = Schema({
   crew: [{ person: person, role: String }]
 });
 
-const Movie = mongoose.model('Movie', movieSchema);
+const Movie = mongoose.model.Movie || mongoose.model('Movie', movieSchema);
 
 module.exports = Movie;
